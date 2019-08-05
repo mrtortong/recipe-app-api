@@ -12,6 +12,7 @@ class ModelTests(TestCase):
         ) 
 
         self.assertEqual(user.email, email)
+        self.assetTrue(user.check_password(password))
 
     def test_new_user_invalid_email(self):
         """Test creating user with no email raises error"""
